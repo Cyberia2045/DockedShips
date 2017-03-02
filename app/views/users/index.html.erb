@@ -1,0 +1,13 @@
+
+
+<% @boats.each do |boat| %>
+<li><%= boat.name %></li>
+<% end %>
+
+
+
+
+<%= link_to 'Create Boat', new_boat_path %>
+
+
+<%= link_to 'Logout', destroy_user_session_path, method: :delete %>
