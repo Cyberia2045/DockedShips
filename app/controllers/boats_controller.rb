@@ -3,34 +3,14 @@ class BoatsController < ApplicationController
 @boat = Boat.new
   end
 
-
  def create
-	   boat = Boat.new
-	   boat.name = boat_params[:name]
-	  if boat.save
-	  	redirect_to '/'
-	  else
-
-	  end
-
-
-	  
+	Boat.create(boat_params)
+  	redirect_to '/'
+	  end  
 	end
 
-
-
-
-
 private
-	    
-
-	    def boat_params
-	      params.require(:boat).permit( :name)
-	    end
-
-
-
-
-
-
+	def boat_params
+	  params.require(:boat).permit( :name, :image)
+	end
 end
