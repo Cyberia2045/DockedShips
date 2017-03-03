@@ -13,3 +13,41 @@
  *= require_tree .
  *= require_self
  */
+
+
+.avail_boat_name{
+
+
+	display: inline-block;
+	outline: solid blue 1px;
+	width: 25%;
+	height: 30px;
+
+
+}
+
+.avail_boat_cont{
+
+
+	display: inline-block;
+	outline: solid orange 1px;
+	width: 15%;
+	height: 30px;
+
+
+}
+
+
+.heading_left{
+
+	margin-left: 30px;
+	
+
+}
+
+.heading{
+
+	font-variant: small-caps;
+	font-weight: bolder;
+
+}

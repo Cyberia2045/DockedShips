@@ -1,13 +1,65 @@
+<%= current_user.email %>
+
+
+
+
+<%= link_to 'Logout', destroy_user_session_path, method: :delete %>
+
+
+
+<%= link_to 'Delete Account', user_registration_path, method: :delete %>
+<br>
+<br>
+<div class="avail_boat_name heading_left heading">Available Boats</div>
+<div class="avail_boat_cont heading">Total Containers</div>
+<div class="avail_boat_cont heading">Available Containers</div>
+
+<% @boats.each do |boat| %>
+<% if boat.avail_cont != 0  %><li>
+<div class="avail_boat_name"><%= link_to boat.name, boat %></div>
+<div class="avail_boat_cont"><%= boat.total_cont %></div>
+<div class="avail_boat_cont"><%= boat.avail_cont %></div>
+</li>
+<% end %>
+<% end %>
+
+<br>
+<br>
+
+<div class="avail_boat_name heading_left heading">Occupied Boats</div>
+<div class="avail_boat_cont heading">Total Containers</div>
+<div class="avail_boat_cont heading">Available Containers</div>
 
 
 <% @boats.each do |boat| %>
-<li><%= boat.name %></li>
+<% if boat.avail_cont == 0  %><li>
+<div class="avail_boat_name"><%= link_to boat.name, boat %></div>
+<div class="avail_boat_cont"><%= boat.total_cont %></div>
+<div class="avail_boat_cont"><%= boat.avail_cont %></div>
+</li>
+<% end %>
 <% end %>
 
 
 
 
-<%= link_to 'Create Boat', new_boat_path %>
+
+<br>
+<%= link_to 'Log new boat', new_boat_path %>
+<br>
+<br>
+<%= link_to 'View jobs', jobs_path %>
 
 
-<%= link_to 'Logout', destroy_user_session_path, method: :delete %>
+
+
+
+
+
+
+
+
+
+
+
+
