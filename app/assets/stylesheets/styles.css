@@ -68,4 +68,6 @@ h1 {
 
 .boats {
 	margin: 0 auto;
+	text-align: center;
+	font-size: 25px;
 }

@@ -1,9 +1,9 @@
 <h1>Welcome to the Shipyard</h1>
 
-<div class = "boats">
 <% @boats.each do |boat| %>
+<div class = "boats">
 <li><%= boat.name %></li>
-<% end %>
 </div>
+<% end %>
 
 <h2><%= link_to 'Create Boat', new_boat_path %><h2>
