@@ -14,3 +14,5 @@ private
 	def boat_params
 	  params.require(:boat).permit( :name, :avatar )
 	end
+
+

@@ -22,7 +22,6 @@ ActiveRecord::Schema.define(version: 20170305030506) do
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
-  end
 
   create_table "jobs", force: :cascade do |t|
     t.datetime "created_at",                          null: false
