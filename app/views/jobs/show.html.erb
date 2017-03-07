@@ -1,0 +1,23 @@
+<div><%= @job.description %></div>
+<br>
+<div><%= @job.origin %></div>
+<br>
+<div><%= @job.destination %></div>
+<br>
+<div><%= @job.cost %></div>
+<br>
+<div><%= @job.containers %></div>
+<br>
+<div><% if @job.status == true %>
+	<%= "open" %>
+	<% else %>
+	<%= "filled" %>
+	<% end %>
+</div>
+<br>
+
+<div><% if @job.status == true %>
+	<%= "Assign boat(s)?" %>
+	
+	<% end %>
+</div>
