@@ -1,0 +1,21 @@
+
+<div class="avail_boat_name heading_left heading">Jobs</div>
+
+<br>
+
+
+<div class="avail_boat_name heading_left heading">ID</div><div class="avail_boat_name heading">Descrption</div><div class="avail_boat_cont heading">Containers</div><div class="avail_boat_cont heading">Status</div>
+
+<% @jobs.each do |job| %>
+<li><div class="avail_boat_name"><%= link_to job.id, job %></div><div class="avail_boat_name"><%= job.description %></div><div class="avail_boat_cont"><%= job.containers %></div><div class="avail_boat_cont">
+
+
+
+<% if job.status == true %>
+	<%= "open" %>
+	<% else %>
+	<%= "filled" %>
+	<% end %>
+
+</div></li>
+<% end %>
