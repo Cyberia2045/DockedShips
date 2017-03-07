@@ -1,13 +1,9 @@
-
+<h1>Welcome to the Shipyard</h1>
 
 <% @boats.each do |boat| %>
+<div class = "boats">
 <li><%= boat.name %></li>
+</div>
 <% end %>
 
-
-
-
-<%= link_to 'Create Boat', new_boat_path %>
-
-
-<%= link_to 'Logout', destroy_user_session_path, method: :delete %>
+<h2><%= link_to 'Create Boat', new_boat_path %><h2>

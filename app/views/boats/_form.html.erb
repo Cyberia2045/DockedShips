@@ -1,19 +1,9 @@
-<%= form_for @boat do |f| %>
-
-
-
-
-
- 
-
-  <div class="field">
-    <%= f.label :name, "Boat Name" %>
-    <%= f.text_field :name %>
-  </div>
-
-  
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+<%= form_for @boat, html: { multipart: true } do |f| %>
+	<%= f.text_field :name, placeholder: "Name Your New Boat" %>
+  	<br>
+  	<br>
+  <%= f.file_field :avatar %>	
+  	<br>
+  	<br>
+    <%= f.submit :class => "create_boat" %>
 <% end %>
